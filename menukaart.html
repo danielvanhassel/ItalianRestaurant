@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="contact.html">Zoek contact op</a></li>
+                <li><a href="menukaart.html">menukaart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="pizza"></div>
+    <div id="pasta"></div>
+    <div id="antipasti"></div>
+    <div id="vegetarisch"></div>
+    <div id="glutenvrij"></div>
+    <script>
+        function loadSection(sectionId, fileName) {
+                fetch(`menukaart_sections/${fileName}`)
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById(sectionId).innerHTML = data;
+                    })
+                    .catch(err => {
+                        console.error(`Fout bij laden van ${fileName}:`, err);
+                        document.getElementById(sectionId).innerHTML = `<p>Kan ${fileName} niet laden.</p>`;
+                    });
+            }
+            loadSection("pizza", "pizza.html")
+            loadSection("pasta", "pasta.html")
+            loadSection("antipasti", "antipasti.html")
+            loadSection("vegetarisch", "vegetarisch.html")
+            loadSection("glutenvrij", "glutenvrij.html")
+    </script>    
+</body>
+</html>

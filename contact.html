@@ -14,5 +14,21 @@
             </ul>
         </nav>
     </header>
+    <div>
+        <h2>Write text to textfile</h2>
+        <textarea id="textData" rows="6" cols="50" placeholder="Enter text to save"></textarea>
+        <br><br>
+        <button onclick="downloadFile()">Download the text file</button>
+    </div>`
+    <script>
+        function downloadFile(){
+            var text = document.getElementById("textData").value;
+            var blob = new Blob([text], {type: 'text/plain' });
+            var link = document.createElement('a')
+            link.href = URL.createObjectURL(blob)
+            link.download = 'questionForRestaurant'
+            link.click();
+        }
+    </script>
 </body>
 </html>

@@ -22,11 +22,17 @@
     </div>`
     <script>
         function downloadFile(){
+            // Haalt de inhoud van de textarea op en zet deze als een string in de variabele text.
             var text = document.getElementById("textData").value;
+            // Blob = Binary Large Object (type tekst file)
             var blob = new Blob([text], {type: 'text/plain' });
+            //maakt een tijdelijke link aan zodat het bestand gedownload kan worden
             var link = document.createElement('a')
+            //maakt een url en koppelt die aan de blob
             link.href = URL.createObjectURL(blob)
+            // naam van bestand als het gedownload wordt.
             link.download = 'questionForRestaurant'
+            // De code wordt uitgevoerd als er op de button geclickt wordt
             link.click();
         }
     </script>

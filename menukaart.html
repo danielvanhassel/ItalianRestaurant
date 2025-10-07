@@ -16,11 +16,13 @@
             </ul>
         </nav>
     </header>
-    <div id="pizza"></div>
-    <div id="pasta"></div>
-    <div id="antipasti"></div>
-    <div id="vegetarisch"></div>
-    <div id="glutenvrij"></div>
+    <div class="menukaart-container">
+        <div id="pizza"></div>
+        <div id="pasta"></div>
+        <div id="antipasti"></div>
+        <div id="vegetarisch"></div>
+        <div id="glutenvrij"></div>
+    </div>
     <script>
         function loadSection(sectionId, fileName) {
                 fetch(`menukaart_sections/${fileName}`)

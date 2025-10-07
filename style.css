@@ -20,9 +20,6 @@ body{
 
 .menukaart-section{
     flex: 1 1 60%;
-    background-image:
-    linear-gradient(rgba(63, 194, 157, 0.7), rgba(63, 194, 157, 0.7)),
-    url(Images/pizza.jpg);
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -32,6 +29,36 @@ body{
     border: #FFD580 solid 2px;
     text-align: center;
     font-weight: bold;
+}
+
+.menukaart-section.pizza{
+    background-image:
+    linear-gradient(rgba(63, 194, 157, 0.7), rgba(63, 194, 157, 0.7)),
+    url(Images/pizza.jpg);
+}
+
+.menukaart-section.pasta{
+    background-image:
+    linear-gradient(rgba(63, 194, 157, 0.7), rgba(63, 194, 157, 0.7)),
+    url(Images/pasta.jpg);
+}
+
+.menukaart-section.antipasti{
+    background-image:
+    linear-gradient(rgba(63, 194, 157, 0.7), rgba(63, 194, 157, 0.7)),
+    url(Images/antipasti.jpg);
+}
+
+.menukaart-section.glutenvrij{
+    background-image:
+    linear-gradient(rgba(63, 194, 157, 0.7), rgba(63, 194, 157, 0.7)),
+    url(Images/glutenvrij.jpg);
+}
+
+.menukaart-section.vegetarisch{
+    background-image:
+    linear-gradient(rgba(63, 194, 157, 0.7), rgba(63, 194, 157, 0.7)),
+    url(Images/vegetarisch.jpg);
 }
 
 .menukaart-section dt{

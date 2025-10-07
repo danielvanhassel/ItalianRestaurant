@@ -1,4 +1,16 @@
 /* huisstijl:
 primaire kleur: #FF3F00
 secondaire kleur: #FFD580
-tetriare kleur: #2A9D8F
+tetriare kleur: #2A9D8F */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menukaart-section{
+    background-color: #e5eaf5;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}

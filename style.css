@@ -20,13 +20,18 @@ body{
 
 .menukaart-section{
     flex: 1 1 60%;
-    background-color: #3fc2b2;
+    background-image:
+    linear-gradient(rgba(63, 194, 157, 0.7), rgba(63, 194, 157, 0.7)),
+    url(Images/pizza.jpg);
+    background-size: cover;
+    background-position: center;
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 100px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     border: #FFD580 solid 2px;
     text-align: center;
+    font-weight: bold;
 }
 
 .menukaart-section dt{

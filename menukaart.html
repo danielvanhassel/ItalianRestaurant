@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Menukaart</title>
 </head>
 <body>
     <header>
@@ -16,13 +16,22 @@
             </ul>
         </nav>
     </header>
+    <main>
+    <div class="menukaart-filter">
+        <button class="menukaart-button" onclick="hideSection('pizza')">Pizza's</button>
+        <button class="menukaart-button" onclick="hideSection('pasta')">Pasta's</button>
+        <button class="menukaart-button" onclick="hideSection('antipasti')">Antipasti</button>
+        <button class="menukaart-button" onclick="hideSection('vegetarisch')">Vegetarisch</button>
+        <button class="menukaart-button" onclick="hideSection('glutenvrij')">Glutenvrij</button>
+    </div>
     <div class="menukaart-container">
         <div id="pizza"></div>
         <div id="pasta"></div>
         <div id="antipasti"></div>
         <div id="vegetarisch"></div>
         <div id="glutenvrij"></div>
-    </div>
+    </div>  
+    </main>
     <script>
         function loadSection(sectionId, fileName) {
                 fetch(`menukaart_sections/${fileName}`)
@@ -35,11 +44,20 @@
                         document.getElementById(sectionId).innerHTML = `<p>Kan ${fileName} niet laden.</p>`;
                     });
             }
-            loadSection("pizza", "pizza.html")
-            loadSection("pasta", "pasta.html")
-            loadSection("antipasti", "antipasti.html")
-            loadSection("vegetarisch", "vegetarisch.html")
-            loadSection("glutenvrij", "glutenvrij.html")
-    </script>    
+            loadSection("pizza", "pizza.html");
+            loadSection("pasta", "pasta.html");
+            loadSection("antipasti", "antipasti.html");
+            loadSection("vegetarisch", "vegetarisch.html");
+            loadSection("glutenvrij", "glutenvrij.html");
+
+        function hideSection(id) {
+            var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                element.style.display = "block";
+                } else {
+                element.style.display = "none";
+            }
+        }
+    </script>  
 </body>
 </html>

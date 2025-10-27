@@ -84,14 +84,14 @@ body{
 }
 
 .nav-links{
-    /*hier komt de code voor het geheel van de links. verwijder deze link voordat je pusht naar github*/
+    /*hier komt de code voor het geheel van de links. verwijder deze comment voordat je pusht naar github*/
     display: flex;
     justify-content: center;
 
 }
 
 .nav-link{
-    /*hier komt code voor de individuele links. verwijder deze link voordat je pusht naar github*/
+    /*hier komt code voor de individuele links. verwijder deze comment voordat je pusht naar github*/
     padding: 10px;
     margin: 0px 10px;
 }
